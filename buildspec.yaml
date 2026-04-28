@@ -1,0 +1,7 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Ejecutando script SQL en RDS"
+      - mysql -h $DB_HOST -u $DB_USER -p$DB_PASS < db/init.sql
