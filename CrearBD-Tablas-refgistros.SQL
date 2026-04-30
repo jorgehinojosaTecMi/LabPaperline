@@ -76,4 +76,5 @@ SELECT
 FROM envios e
 JOIN clientes c ON e.id_cliente = c.id_cliente
 JOIN vehiculos v ON e.id_vehiculo = v.id_vehiculo
-JOIN rutas r ON e.id_ruta = r.id_ruta;
+JOIN rutas r ON e.id_ruta = r.id_ruta
+WHERE e.estado = 'Entregado';
